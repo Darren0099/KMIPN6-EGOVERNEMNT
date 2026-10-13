@@ -1,0 +1,564 @@
+/* Halaman destinasi: palet cerah (merah Ampera, emas songket, krem, ungu) */
+.page {
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 1rem;
+  overflow-x: clip;
+}
+
+.page h1,
+.page h2,
+.page h3 {
+  color: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.wrap {
+  position: relative;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* ===== Pill judul ===== */
+.pill {
+  display: inline-block;
+  margin: 0.06em 0.04em;
+  padding: 0.04em 0.38em;
+  border-radius: 0.5em;
+  line-height: 1.15;
+  transform: rotate(-1.5deg);
+}
+.pillRed {
+  background: var(--red);
+  color: #fff;
+}
+.pillWhite {
+  background: #fff;
+  color: var(--ink);
+  transform: rotate(1.5deg);
+}
+.pillYellow {
+  background: var(--yellow);
+  color: var(--ink);
+}
+.pillPurple {
+  background: var(--purple);
+  color: #fff;
+}
+
+/* ===== Tombol ===== */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.btnDark,
+.btnRed,
+.tourBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 600;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btnDark {
+  background: var(--ink);
+  color: #fff;
+}
+.btnRed {
+  background: var(--red);
+  color: #fff;
+  padding-right: 0.55rem;
+}
+.tourBtn {
+  background: var(--yellow);
+  color: var(--ink);
+  padding-right: 0.55rem;
+}
+
+.btnDark:hover,
+.btnRed:hover,
+.tourBtn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 0 -2px rgba(31, 20, 16, 0.25);
+}
+
+.btnIcon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--ink);
+  font-size: 1.1rem;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--yellow);
+  padding: clamp(7rem, 14vw, 9rem) 0 clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.crumb {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(1.9rem, 4.6vw, 3.9rem);
+  line-height: 1.22;
+  overflow-wrap: anywhere;
+}
+
+.lead {
+  max-width: 520px;
+  margin-top: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.visual {
+  position: relative;
+  width: min(100%, 500px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+.burstBig {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  color: var(--ink);
+}
+
+.burstPurple {
+  position: absolute;
+  top: -5%;
+  right: -3%;
+  width: 28%;
+  color: var(--purple);
+}
+
+.burstRed {
+  position: absolute;
+  bottom: 0;
+  left: -5%;
+  width: 22%;
+  color: var(--red);
+}
+
+.frame {
+  position: absolute;
+  inset: 13%;
+  overflow: hidden;
+  border: 6px solid #fff;
+  border-radius: 34px;
+  background: var(--red);
+  transform: rotate(-3deg);
+  box-shadow: 0 16px 0 rgba(0, 0, 0, 0.12);
+}
+
+.frame img {
+  object-fit: cover;
+}
+
+.initials {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: #fff;
+  font-size: clamp(4rem, 12vw, 7rem);
+  font-weight: 800;
+}
+
+/* ===== Sambutan ===== */
+.welcome {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 0;
+}
+
+.welcomePanel {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1.5rem, 5vw, 4rem);
+  border-radius: 40px;
+  background: var(--purple);
+  color: #fff;
+  text-align: center;
+}
+
+.welcomePanel h2 {
+  position: relative;
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  line-height: 1.35;
+}
+
+.welcomePanel p {
+  position: relative;
+  max-width: 640px;
+  margin: 1.25rem auto 0;
+  line-height: 1.7;
+}
+
+.welcomeBurstA {
+  position: absolute;
+  top: -40px;
+  left: -40px;
+  width: 140px;
+  color: var(--yellow);
+  opacity: 0.9;
+}
+
+.welcomeBurstB {
+  position: absolute;
+  right: -30px;
+  bottom: -40px;
+  width: 120px;
+  color: var(--red);
+}
+
+/* ===== Informasi ===== */
+.info {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.infoRow {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: start;
+  gap: 2rem;
+}
+
+.infoRow + .infoRow {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+}
+
+.infoHead h2 {
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.3;
+}
+
+.infoBody {
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0 10px 0 rgba(31, 20, 16, 0.08);
+}
+
+.infoBody p {
+  font-size: 1.02rem;
+  line-height: 1.85;
+}
+
+.infoBody p + p {
+  margin-top: 1.1rem;
+}
+
+/* Fakta (tiket, jam, dsb.) sebagai tag berwarna */
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  list-style: none;
+}
+
+.facts li {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: 22px;
+}
+
+.facts span {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.facts strong {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.factPurple {
+  background: var(--purple);
+  color: #fff;
+}
+.factYellow {
+  background: var(--yellow);
+}
+.factInk {
+  background: var(--ink);
+  color: #fff;
+}
+.factOutline {
+  border: 2px solid var(--ink);
+}
+
+/* ===== Section judul umum ===== */
+.sectionHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionHead h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2.6rem);
+  line-height: 1.3;
+}
+
+.sectionHead p,
+.mapLink {
+  font-weight: 600;
+}
+
+.mapLink {
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  font-size: 0.9rem;
+  transition: background-color 0.25s;
+}
+
+.mapLink:hover {
+  background: var(--purple);
+}
+
+/* ===== Galeri ===== */
+.gallery {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+  background: var(--red);
+  color: #fff;
+}
+
+.galleryBurst {
+  position: absolute;
+  top: -80px;
+  right: -60px;
+  width: 300px;
+  color: var(--ink);
+  opacity: 0.18;
+}
+
+/* ===== Tur virtual ===== */
+.tour {
+  padding: clamp(3rem, 7vw, 5.5rem) 0 0;
+}
+
+.tourPanel {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  align-items: center;
+  gap: 2rem;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  border-radius: 40px;
+  background: var(--purple);
+  color: #fff;
+}
+
+.tourTag {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: var(--red);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.tourText h2 {
+  margin-top: 1rem;
+  font-size: clamp(1.4rem, 3vw, 2.3rem);
+  line-height: 1.35;
+}
+
+.tourText p {
+  max-width: 520px;
+  margin: 1rem 0 1.75rem;
+  line-height: 1.7;
+}
+
+.tourText small {
+  display: block;
+  margin-top: 1rem;
+  opacity: 0.75;
+}
+
+.tourVisual {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: min(100%, 280px);
+  aspect-ratio: 1;
+  margin-inline: auto;
+}
+
+.tourBurst {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--yellow);
+}
+
+.tourVisual span {
+  position: relative;
+  color: var(--ink);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  transform: rotate(-6deg);
+}
+
+/* ===== Lokasi ===== */
+.location {
+  padding: clamp(3rem, 7vw, 5.5rem) 0;
+}
+
+.map {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  min-height: 300px;
+  overflow: hidden;
+  border: 6px solid #fff;
+  border-radius: 36px;
+  background: #fff;
+  box-shadow: 0 12px 0 rgba(31, 20, 16, 0.1);
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ===== Destinasi lain ===== */
+.more {
+  padding: clamp(3rem, 7vw, 5rem) 0;
+  background: var(--yellow);
+}
+
+.moreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.moreCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: 0.9rem;
+  border-radius: 28px;
+  background: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.moreCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 0 -4px rgba(31, 20, 16, 0.25);
+}
+
+.moreImg {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--cream);
+}
+
+.moreImg img {
+  object-fit: cover;
+}
+
+.moreName {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0 0.3rem 0.2rem;
+  font-size: 1rem;
+}
+
+.arrow {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--purple);
+  color: #fff;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .heroGrid,
+  .infoRow,
+  .tourPanel {
+    grid-template-columns: 1fr;
+  }
+
+  .visual {
+    width: min(100%, 380px);
+  }
+
+  .tourVisual {
+    width: 180px;
+    order: -1;
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .actions a {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .map {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.source {
+  margin-top: 2rem;
+  font-size: 0.82rem;
+  opacity: 0.7;
+}

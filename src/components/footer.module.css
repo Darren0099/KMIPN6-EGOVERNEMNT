@@ -1,0 +1,160 @@
+.footer {
+  padding: 100px 0 30px;
+  background: #2c1692;
+  color: #fff;
+  border-top-left-radius: 125px;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.row {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.col {
+  flex-basis: 25%;
+  padding: 10px;
+}
+
+.narrow {
+  flex-basis: 15%;
+}
+
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+
+.logos img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+}
+
+.col h3 {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 40px;
+}
+
+.underline {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-radius: 3px;
+  background: #767676;
+  overflow: hidden;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 15px;
+  height: 100%;
+  border-radius: 3px;
+  background: #fff;
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.email {
+  width: fit-content;
+  margin: 1.25rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.col ul li {
+  margin-bottom: 12px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.form i:first-child {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.form input {
+  width: 100%;
+  color: #ccc;
+}
+
+.form button {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.social i {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer hr {
+  width: 90%;
+  margin: 20px auto;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.copy {
+  text-align: center;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    padding-top: 60px;
+    border-top-left-radius: 60px;
+  }
+  .col,
+  .narrow {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .col,
+  .narrow {
+    flex-basis: 100%;
+  }
+}
