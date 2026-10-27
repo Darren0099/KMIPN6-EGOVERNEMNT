@@ -33,7 +33,7 @@ export default function Gallery({ items }: { items: GalleryItem[] }) {
 
   return (
     <>
-      <ul className={styles.grid} data-count={Math.min(total, 5)}>
+      <ul className={styles.grid} data-count={Math.min(total, 5)} data-reveal-group="up">
         {items.map((g, i) => (
           <li key={g.src}>
             <button type="button" className={styles.card} onClick={() => setCurrent(i)} aria-label={`Perbesar foto: ${g.alt}`}>

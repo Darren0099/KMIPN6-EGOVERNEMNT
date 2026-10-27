@@ -333,3 +333,11 @@
     max-height: 300px;
   }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .nav { animation: nav-arrive 650ms cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+  @keyframes nav-arrive {
+    from { opacity: 0; transform: translateY(-14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}

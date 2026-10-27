@@ -86,7 +86,7 @@ export default async function DestinationPage({ params }: Props) {
         {/* ===== Hero ===== */}
         <section className={styles.hero}>
           <div className={`${styles.wrap} ${styles.heroGrid}`}>
-            <div className={styles.heroText}>
+            <div className={styles.heroText} data-reveal="left">
               <span className={styles.crumb}>{categories[d.category].label} · Palembang</span>
               <h1 className={styles.title}>
                 <TitlePills text={d.name} />
@@ -108,7 +108,7 @@ export default async function DestinationPage({ params }: Props) {
               </div>
             </div>
 
-            <div className={styles.visual}>
+            <div className={styles.visual} data-reveal="right">
               <Starburst className={styles.burstBig} points={14} depth={0.82} />
               <Starburst className={styles.burstPurple} points={9} depth={0.7} />
               <Starburst className={styles.burstRed} points={10} depth={0.72} />
@@ -127,7 +127,7 @@ export default async function DestinationPage({ params }: Props) {
         {d.tagline && (
         <section className={styles.welcome}>
           <div className={styles.wrap}>
-            <div className={styles.welcomePanel}>
+            <div className={styles.welcomePanel} data-reveal="zoom">
               <Starburst className={styles.welcomeBurstA} points={12} depth={0.75} />
               <Starburst className={styles.welcomeBurstB} points={9} depth={0.7} />
               <h2>
@@ -141,7 +141,7 @@ export default async function DestinationPage({ params }: Props) {
 
         {/* ===== Informasi ===== */}
         <section className={styles.info} id="info">
-          <div className={styles.wrap}>
+          <div className={styles.wrap} data-reveal-group="up">
             {rows.map((s, i) => (
               <div key={s.title} className={styles.infoRow}>
                 <div className={styles.infoHead}>
@@ -175,7 +175,7 @@ export default async function DestinationPage({ params }: Props) {
           <section className={styles.gallery} id="galeri">
             <Starburst className={styles.galleryBurst} points={16} depth={0.8} />
             <div className={styles.wrap}>
-              <div className={styles.sectionHead}>
+              <div className={styles.sectionHead} data-reveal="up">
                 <h2>
                   <span className={`${styles.pill} ${styles.pillYellow}`}>Galeri</span>{" "}
                   <span className={`${styles.pill} ${styles.pillWhite}`}>Foto</span>
@@ -191,7 +191,7 @@ export default async function DestinationPage({ params }: Props) {
         {tourUrl && (
           <section className={styles.tour} id="tur">
             <div className={styles.wrap}>
-              <div className={styles.tourPanel}>
+              <div className={styles.tourPanel} data-reveal="zoom">
                 <div className={styles.tourText}>
                   <span className={styles.tourTag}>Virtual Tour</span>
                   <h2>
@@ -217,7 +217,7 @@ export default async function DestinationPage({ params }: Props) {
         {/* ===== Lokasi ===== */}
         <section className={styles.location} id="lokasi">
           <div className={styles.wrap}>
-            <div className={styles.sectionHead}>
+            <div className={styles.sectionHead} data-reveal="up">
               <h2>
                 <span className={`${styles.pill} ${styles.pillRed}`}>Lokasi</span>
               </h2>
@@ -225,7 +225,7 @@ export default async function DestinationPage({ params }: Props) {
                 Buka di Google Maps ↗
               </a>
             </div>
-            <div className={styles.map}>
+            <div className={styles.map} data-reveal="zoom">
               <iframe
                 src={mapSrc}
                 title={`Peta ${d.name}`}
@@ -240,7 +240,7 @@ export default async function DestinationPage({ params }: Props) {
         {/* ===== Destinasi lain ===== */}
         <section className={styles.more}>
           <div className={styles.wrap}>
-            <div className={styles.sectionHead}>
+            <div className={styles.sectionHead} data-reveal="up">
               <h2>
                 <span className={`${styles.pill} ${styles.pillWhite}`}>Destinasi</span>{" "}
                 <span className={`${styles.pill} ${styles.pillRed}`}>Lainnya</span>
@@ -249,7 +249,7 @@ export default async function DestinationPage({ params }: Props) {
                 Kembali ke beranda →
               </Link>
             </div>
-            <ul className={styles.moreGrid}>
+            <ul className={styles.moreGrid} data-reveal-group="up">
               {related(d).map((r) => (
                 <li key={r.slug}>
                   <Link href={`/wisata/${r.slug}`} className={styles.moreCard}>

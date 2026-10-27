@@ -30,7 +30,7 @@ export default function DestinationExplorer({ items, tabs }: { items: ExplorerIt
 
   return (
     <div>
-      <div className={styles.tabs} role="tablist">
+      <div className={styles.tabs} role="tablist" data-reveal="up">
         {tabs.map((t) => (
           <button
             key={t.key}
@@ -49,7 +49,7 @@ export default function DestinationExplorer({ items, tabs }: { items: ExplorerIt
         ))}
       </div>
 
-      <ul className={styles.grid}>
+      <ul className={styles.grid} data-reveal-group="up">
         {shown.map((d) => (
           <li key={d.slug}>
             <Link href={`/wisata/${d.slug}`} className={styles.card}>
