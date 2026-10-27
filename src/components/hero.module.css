@@ -178,3 +178,11 @@
     padding-right: 0;
   }
 }
+
+/* Gentle cinematic zoom during background slide crossfades. */
+.bgItem .img { transform: scale(1.045); transition: transform 5.5s ease-out; }
+.bgActive .img { transform: scale(1); }
+@media (prefers-reduced-motion: reduce) {
+  .bgItem, .bgItem .img, .thumb { transition: none; }
+  .content p:first-child, .content h2, .content p:last-child { animation: none; }
+}
