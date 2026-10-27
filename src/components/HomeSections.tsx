@@ -17,10 +17,10 @@ const factStyles = ["factPurple", "factYellow", "factInk", "factOutline", "factP
 export function WhyChooseUs() {
   return (
     <section className={styles.why}>
-      <h2 className={styles.sectionTitle}>
+      <h2 className={styles.sectionTitle} data-reveal="up">
         <span className="pill pill-yellow">Why</span> Choose <span className="pill pill-red">Us</span>
       </h2>
-      <div className={styles.whyText}>
+      <div className={styles.whyText} data-reveal-group="up">
         {whyChooseUs.map((p, i) => (
           <p key={i}>{p}</p>
         ))}
@@ -33,20 +33,20 @@ export function About() {
   return (
     <section className={styles.about} id="about">
       <div className={`${styles.aboutGrid} ${styles.wrap}`}>
-        <div className={styles.aboutImages}>
+        <div className={styles.aboutImages} data-reveal="left">
           {[0, 1, 2, 3].map((i) => (
             <Image key={i} src={about.image} alt="" fill sizes="400px" className={styles.aboutImg} />
           ))}
         </div>
 
-        <div>
+        <div data-reveal="right">
           <h2 className={styles.aboutTitle}>
             <small>Welcome To</small>
             <span className="pill pill-purple">Palembang</span> Go <span className="pill pill-red">Vacation!</span>
           </h2>
           <p className={styles.aboutDescription}>{about.description}</p>
 
-          <ul className={styles.facts}>
+          <ul className={styles.facts} data-reveal-group="up">
             {about.facts.map((f, i) => (
               <li key={f.label} className={styles[factStyles[i % factStyles.length]]}>
                 <span>{f.label.replace(":", "")}</span>
@@ -78,10 +78,10 @@ export function History() {
   return (
     <section className={styles.history} id="sejarah">
       <div className={styles.wrap}>
-        <h2 className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle} data-reveal="up">
           <span className="pill pill-red">Sejarah</span> <span className="pill pill-purple">Palembang</span>
         </h2>
-        <ol className={styles.timeline}>
+        <ol className={styles.timeline} data-reveal-group="up">
           {history.map((h, i) => (
             <li key={h.title} className={`${styles.timeCard} ${styles[tones[i % tones.length]]}`}>
               <span className={styles.period}>{h.period}</span>
@@ -91,7 +91,7 @@ export function History() {
           ))}
         </ol>
 
-        <div className={styles.vision}>
+        <div className={styles.vision} data-reveal="zoom">
           <Starburst className={styles.visionBurst} points={12} depth={0.75} />
           <h3>
             Visi Kota Palembang <span className="pill pill-yellow">2030</span>
@@ -113,7 +113,7 @@ export function PuntiKayu() {
     <section className={styles.punti}>
       <Starburst className={styles.puntiBurst} points={16} depth={0.8} />
       <div className={`${styles.puntiRow} ${styles.wrap}`}>
-        <div className={styles.puntiText}>
+        <div className={styles.puntiText} data-reveal="left">
           <h2>
             <span className="pill pill-white">Punti</span> <span className="pill pill-yellow">Kayu</span>
           </h2>
@@ -122,7 +122,7 @@ export function PuntiKayu() {
             Explore <span className="btn-icon">↗</span>
           </Link>
         </div>
-        <ul className={styles.puntiCards}>
+        <ul className={styles.puntiCards} data-reveal-group="right">
           {p.cards.map((c) => (
             <li key={c.label} className={styles.puntiCard}>
               <span className={styles.puntiPhoto}>
@@ -146,7 +146,7 @@ export function Stats() {
   ];
   return (
     <div className={styles.statsWrap}>
-      <div className={`${styles.stats} ${styles.wrap}`}>
+      <div className={`${styles.stats} ${styles.wrap}`} data-reveal-group="up">
         {stats.map((s) => (
           <div key={s.label} className={styles.stat}>
             <i className={s.icon} />
@@ -163,10 +163,10 @@ export function Destinations() {
   return (
     <section className={styles.destinations} id="destinations">
       <div className={styles.wrap}>
-        <h2 className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle} data-reveal="up">
           <span className="pill pill-yellow">Destinasi</span> <span className="pill pill-red">Pilihan</span>
         </h2>
-        <ul className={styles.cards}>
+        <ul className={styles.cards} data-reveal-group="up">
           {featuredDestinations.map((d) => (
             <li key={d.slug}>
               <Link href={`/wisata/${d.slug}`} className={styles.card}>
@@ -204,10 +204,10 @@ export function Explorer() {
   return (
     <section className={styles.explorer} id="semua">
       <div className={styles.wrap}>
-        <h2 className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle} data-reveal="up">
           <span className="pill pill-white">Semua</span> <span className="pill pill-purple">Destinasi</span>
         </h2>
-        <p className={styles.sectionLead}>
+        <p className={styles.sectionLead} data-reveal="up">
           {destinations.length} destinasi wisata Palembang. Tanda <b>360°</b> berarti tersedia tur virtual 3D.
         </p>
         <DestinationExplorer items={items} tabs={tabs} />
@@ -220,10 +220,10 @@ export function CityView() {
   return (
     <section className={styles.city}>
       <div className={styles.wrap}>
-        <h2 className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle} data-reveal="up">
           <span className="pill pill-red">Palembang</span> <span className="pill pill-white">City View</span>
         </h2>
-        <ul className={styles.cityRow}>
+        <ul className={styles.cityRow} data-reveal-group="up">
           {cityView.map((c) => (
             <li key={c.label} className={styles.cityCol}>
               <Image src={c.image} alt={c.label} fill sizes="(max-width: 800px) 100vw, 380px" />
@@ -240,10 +240,10 @@ export function MapSection() {
   return (
     <section className={styles.map} id="maps">
       <div className={styles.wrap}>
-        <h2 className={styles.sectionTitle}>
+        <h2 className={styles.sectionTitle} data-reveal="up">
           <span className="pill pill-yellow">Peta</span> <span className="pill pill-red">Lokasi</span>
         </h2>
-        <div className={styles.mapFrame}>
+        <div className={styles.mapFrame} data-reveal="zoom">
           <iframe
             src={site.mapEmbed}
             title="Lokasi Dinas Pariwisata Kota Palembang"
