@@ -15,7 +15,7 @@ export default function Footer({ banner = true }: { banner?: boolean }) {
   return (
     <>
       <footer className={styles.footer} id="contact">
-        <div className={styles.row}>
+        <div className={styles.row} data-reveal-group="up">
           <div className={styles.col}>
             <div className={styles.logos}>
               <Image src="/img/logo-poltek.png" alt="Logo Poltek" width={80} height={80} />
@@ -63,7 +63,7 @@ export default function Footer({ banner = true }: { banner?: boolean }) {
           </div>
         </div>
         <hr />
-        <p className={styles.copy}>PalembangGoVacation! © All right reserved</p>
+        <p className={styles.copy} data-reveal="up">PalembangGoVacation! © All right reserved</p>
       </footer>
 
       {/* Banner ilustrasi di bawah footer */}
